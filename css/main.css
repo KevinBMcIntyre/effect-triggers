@@ -31,10 +31,12 @@ div {
 .box {
   height: 100px;
   top: calc(50% - 50px);
-  width: 200px;
-
+  transition: all 1s ease;
   background-color: limegreen;
   opacity: 0;
+}
+.box-show {
+  opacity: 1;
 }
 
 .diamond {
