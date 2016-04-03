@@ -36,6 +36,7 @@ div {
   opacity: 0;
   width: 200px;
 }
+
 .box-show {
   opacity: 1;
 }
@@ -153,10 +154,13 @@ div {
 }
 
 @keyframes expand {
+
   0% {
     max-height: 0;
   }
+
   100% {
     max-height: 1.5em;
   }
+
 }

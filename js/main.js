@@ -1,4 +1,4 @@
-var $body = $ ('body');
+var $body = $('body');
 var $btnShowHide = $('.btn-show-hide');
 var $box = $('.box');
 var $btnMove = $('.btn-move');
@@ -11,19 +11,23 @@ var $btnAppend = $('.btn-append');
 var $list = $('.list');
 
 $btnShowHide.on('click', function () {
-	$box.toggleClass('box-show');
+  $box.toggleClass('box-show');
 });
 
 $btnMove.on('click', function () {
-	$diamond.toggleClass('diamond-move');
+  $diamond.toggleClass('diamond-move');
 });
 
 $btnCol.on('click', function () {
-	$panel.toggleClass('panel-collapse');
+  $panel.toggleClass('panel-collapse');
 });
 
 $btnBounce.on('click', function () {
-	$circle.toggleClass('bounce');
+  $circle.addClass('bounce');
+});
+
+$circle.on('animationend', function () {
+  $circle.removeClass('bounce');
 });
 
 $btnAppend.on('click', function () {
