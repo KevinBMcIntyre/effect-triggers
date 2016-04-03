@@ -31,9 +31,10 @@ div {
 .box {
   height: 100px;
   top: calc(50% - 50px);
-  transition: all 1s ease;
+  transition: all .7s ease;
   background-color: limegreen;
   opacity: 0;
+  width: 200px;
 }
 .box-show {
   opacity: 1;
@@ -44,9 +45,13 @@ div {
   right: -100px;
   top: calc(50% - 40px);
   width: 80px;
-
+  transition: all .7s ease;
   background-color: hotpink;
   transform: rotate(45deg);
+}
+
+.diamond-move {
+  right: 100px;
 }
 
 .panel {
@@ -54,12 +59,16 @@ div {
   overflow: hidden;
   top: 50%;
   width: 250px;
-
+  transition: all .7s ease;
   background-color: yellow;
   transform: translateY(-50%);
 
   color: darkgoldenrod;
   text-align: center;
+}
+
+.panel-collapse {
+  max-height: 0;
 }
 
 .panel h2 {
@@ -76,6 +85,49 @@ div {
   border-radius: 50%;
 }
 
+.bounce {
+  height: 100px;
+  right: -100px;
+  top: calc(50% - 50px);
+  width: 100px;
+  background-color: orange;
+  border-radius: 50%;
+  animation: bounce 1s both;
+}
+
+@keyframes bounce {
+
+  0% {
+    right: -100px;
+    top: 40px;
+  }
+
+  25% {
+    top: 10px;
+  }
+
+  40% {
+    top: 40px;
+  }
+
+  60% {
+    top: 10px;
+  }
+
+  70% {
+    top: 30px;
+  }
+
+  95% {
+    top: 10px;
+  }
+
+  100% {
+    right: 150px;
+    top: 40px;
+  }
+}
+
 .list {
   bottom: 1em;
   margin: 0;
@@ -84,7 +136,6 @@ div {
   right: 1em;
   top: 1em;
   width: 250px;
-
   border: 1px solid #ccc;
   overflow: hidden;
   overflow-y: auto;
@@ -94,10 +145,18 @@ div {
   overflow: hidden;
   padding: 0 0.5em;
   max-height: 0;
-
   background-color: plum;
   border: 1px solid mediumpurple;
   overflow: hidden;
-
   color: mediumpurple;
+  animation: expand .3s forwards ease-out;
+}
+
+@keyframs expand {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 100%;
+  }
 }
