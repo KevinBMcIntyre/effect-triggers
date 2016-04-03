@@ -10,7 +10,6 @@ var $circle = $('.circle');
 var $btnAppend = $('.btn-append');
 var $list = $('.list');
 
-
 $btnShowHide.on('click', function () {
 	$box.toggleClass('box-show');
 });
@@ -28,6 +27,5 @@ $btnBounce.on('click', function () {
 });
 
 $btnAppend.on('click', function () {
-	$list.toggleClass('expand');
+  $list.prepend('<li>New List Item</li>');
 });
-
